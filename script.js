@@ -33,15 +33,17 @@ const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
 
 hamburger.addEventListener('click', () => {
+  const isOpen = nav.classList.toggle('open');
   hamburger.classList.toggle('active');
-  nav.classList.toggle('open');
-  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+  header.classList.toggle('nav-open', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
 nav.querySelectorAll('.nav__link').forEach(link => {
   link.addEventListener('click', () => {
     hamburger.classList.remove('active');
     nav.classList.remove('open');
+    header.classList.remove('nav-open');
     document.body.style.overflow = '';
   });
 });
