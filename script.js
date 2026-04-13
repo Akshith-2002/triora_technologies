@@ -30,27 +30,30 @@ window.addEventListener('scroll', () => {
 
 // ===== MOBILE MENU =====
 const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+const mobileNav = document.getElementById('mobileNav');
+
+function closeMobileNav() {
+  hamburger.classList.remove('active');
+  mobileNav.classList.remove('open');
+  header.classList.remove('nav-open');
+  document.body.style.overflow = '';
+}
 
 hamburger.addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('open');
+  const isOpen = mobileNav.classList.toggle('open');
   hamburger.classList.toggle('active');
   header.classList.toggle('nav-open', isOpen);
   document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 
-nav.querySelectorAll('.nav__link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    nav.classList.remove('open');
-    header.classList.remove('nav-open');
-    document.body.style.overflow = '';
-  });
+// Close mobile nav on link click
+mobileNav.querySelectorAll('.mobile-nav__link, .mobile-nav__cta').forEach(link => {
+  link.addEventListener('click', closeMobileNav);
 });
 
 // ===== ACTIVE NAV ON SCROLL =====
 const sections = document.querySelectorAll('section[id]');
-const navLinks = document.querySelectorAll('.nav__link');
+const navLinks = document.querySelectorAll('.nav__link, .mobile-nav__link');
 
 function updateActiveNav() {
   const scrollY = window.scrollY + 120;

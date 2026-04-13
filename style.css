@@ -259,8 +259,90 @@ button, input, select, textarea {
 .logo__accent { font-weight: 500; color: var(--gray-400); margin-left: 3px; }
 
 .nav__list { display: flex; gap: 36px; }
-.nav__mobile-cta,
-.nav__mobile-footer { display: none; }
+
+/* ===== MOBILE NAV OVERLAY ===== */
+.mobile-nav {
+  position: fixed;
+  top: 0; right: 0;
+  width: 100%; height: 100%;
+  background: var(--dark);
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  visibility: hidden;
+}
+.mobile-nav.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+.mobile-nav__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  max-width: 320px;
+  padding: 0 24px;
+}
+.mobile-nav__list {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.mobile-nav__link {
+  display: block;
+  font-family: var(--font-primary);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.4);
+  padding: 16px 0;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.3s, transform 0.3s, letter-spacing 0.3s;
+  text-decoration: none;
+}
+.mobile-nav__link:hover,
+.mobile-nav__link:active {
+  color: var(--white);
+  letter-spacing: 2px;
+}
+.mobile-nav__cta {
+  margin-top: 36px;
+  width: 100%;
+  justify-content: center;
+}
+.mobile-nav__footer {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+}
+.mobile-nav__footer a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px; height: 48px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.4);
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+.mobile-nav__footer a:hover {
+  background: var(--gradient);
+  color: var(--white);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+/* Hide mobile nav on desktop */
+@media (min-width: 769px) {
+  .mobile-nav { display: none; }
+}
 .nav__link {
   font-family: var(--font-primary);
   font-size: 0.875rem;
@@ -1291,79 +1373,12 @@ button, input, select, textarea {
 @media (max-width: 768px) {
   .cursor-glow { display: none; }
 
-  /* ---- Mobile Nav - Slide from Right ---- */
-  .nav {
-    position: fixed;
-    top: 0; right: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--dark);
-    z-index: 9999;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 32px;
-    overflow-y: auto;
-    transform: translateX(100%);
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
-    visibility: hidden;
-  }
-  .nav.open {
-    transform: translateX(0);
-    visibility: visible;
-  }
-  .nav.open .nav__list {
-    flex-direction: column;
-    gap: 0;
-    width: 100%;
-    max-width: 320px;
-  }
-  .nav .nav__link {
-    font-size: 1.5rem;
-    font-weight: 700;
-    padding: 20px 0;
-    display: block;
-    color: rgba(255,255,255,0.5);
-    border-bottom: 1px solid rgba(255,255,255,0.06);
-    text-align: center;
-    transition: color 0.3s, transform 0.3s;
-  }
-  .nav .nav__link:hover,
-  .nav .nav__link.active {
-    color: var(--white);
-    transform: translateX(4px);
-  }
-  .nav .nav__link::after { display: none; }
-
-  /* Nav CTA button at bottom */
-  .nav .nav__mobile-cta {
-    display: block;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  /* Nav social links */
-  .nav .nav__mobile-footer {
-    display: block;
-    margin-top: auto;
-    padding-top: 40px;
-    text-align: center;
-    color: rgba(255,255,255,0.3);
-    font-size: 0.85rem;
-  }
-  .nav__mobile-footer a {
-    color: rgba(255,255,255,0.4);
-    margin: 0 10px;
-    font-size: 1.1rem;
-    transition: color 0.3s;
-  }
-  .nav__mobile-footer a:hover { color: var(--white); }
-
-  .hamburger { display: flex; z-index: 10000; position: relative; }
+  /* ---- Hide desktop nav, show hamburger ---- */
+  .nav--desktop { display: none; }
+  .hamburger { display: flex; z-index: 100000; position: relative; }
   .hamburger.active span { background: var(--white); }
   .header__actions .btn { display: none; }
-  .header__actions { z-index: 10000; position: relative; }
+  .header__actions { z-index: 100000; position: relative; }
 
   /* ---- Hero ---- */
   .hero { padding: 100px 0 0; min-height: auto; }

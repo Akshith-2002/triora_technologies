@@ -110,7 +110,7 @@
         <span class="logo__icon">T</span>
         <span class="logo__text">Triora<span class="logo__accent">Technologies</span></span>
       </a>
-      <nav class="nav" id="nav">
+      <nav class="nav nav--desktop" id="navDesktop">
         <ul class="nav__list">
           <li><a href="#home" class="nav__link active">Home</a></li>
           <li><a href="#about" class="nav__link">About</a></li>
@@ -119,15 +119,6 @@
           <li><a href="#work" class="nav__link">Our Work</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
         </ul>
-        <div class="nav__mobile-cta">
-          <a href="#contact" class="btn btn--glow">Get a Quote <i class="fas fa-arrow-right"></i></a>
-        </div>
-        <div class="nav__mobile-footer">
-          <a href="tel:+919019533772"><i class="fas fa-phone"></i></a>
-          <a href="mailto:akshithy888@gmail.com"><i class="fas fa-envelope"></i></a>
-          <a href="#"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
       </nav>
       <div class="header__actions">
         <a href="#contact" class="btn btn--primary btn--sm">Get a Quote</a>
@@ -137,6 +128,29 @@
       </div>
     </div>
   </header>
+
+  <!-- Mobile Nav Overlay (outside header to avoid stacking context issues) -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__inner">
+      <ul class="mobile-nav__list">
+        <li><a href="#home" class="mobile-nav__link">Home</a></li>
+        <li><a href="#about" class="mobile-nav__link">About</a></li>
+        <li><a href="#services" class="mobile-nav__link">Services</a></li>
+        <li><a href="#industries" class="mobile-nav__link">Industries</a></li>
+        <li><a href="#work" class="mobile-nav__link">Our Work</a></li>
+        <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="mobile-nav__cta btn btn--glow">
+        Get a Quote <i class="fas fa-arrow-right"></i>
+      </a>
+      <div class="mobile-nav__footer">
+        <a href="tel:+919019533772"><i class="fas fa-phone"></i></a>
+        <a href="mailto:akshithy888@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
 
   <main>
 
