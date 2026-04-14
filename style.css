@@ -253,9 +253,10 @@ button, input, select, textarea {
   font-family: var(--font-primary);
   font-weight: 800;
   font-size: 1.3rem;
-  color: var(--dark);
+  color: var(--white);
 }
-.hero .logo__text { color: var(--white); }
+.header.scrolled .logo__text { color: var(--dark); }
+.header.scrolled .logo__accent { color: var(--gray-500); }
 .logo__accent { font-weight: 500; color: var(--gray-400); margin-left: 3px; }
 
 .nav__list { display: flex; gap: 36px; }
