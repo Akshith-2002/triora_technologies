@@ -171,6 +171,21 @@ form.addEventListener('submit', function (e) {
   }, 1200);
 });
 
+// ===== SOLUTIONS CAROUSEL =====
+const solTrack = document.getElementById('solutionsTrack');
+const solPrev = document.getElementById('solPrev');
+const solNext = document.getElementById('solNext');
+
+if (solTrack && solPrev && solNext) {
+  const scrollAmount = 370;
+  solNext.addEventListener('click', () => {
+    solTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+  solPrev.addEventListener('click', () => {
+    solTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+}
+
 // ===== PARALLAX ON HERO MESH ORBS =====
 const heroMesh = document.querySelector('.hero__mesh');
 if (heroMesh) {
