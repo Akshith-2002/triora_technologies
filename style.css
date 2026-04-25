@@ -246,8 +246,8 @@ button, input, select, textarea {
 
 .logo { display: flex; align-items: center; gap: 10px; }
 .logo__svg {
-  height: 40px;
-  width: 40px;
+  height: 56px;
+  width: 56px;
   display: block;
   object-fit: contain;
   flex-shrink: 0;
@@ -255,12 +255,12 @@ button, input, select, textarea {
 .logo__text {
   font-family: var(--font-primary);
   font-weight: 800;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   color: var(--white);
 }
 .header.scrolled .logo__text { color: var(--dark); }
 .header.scrolled .logo__accent { color: var(--gray-500); }
-.logo__accent { font-weight: 500; color: var(--gray-400); margin-left: 3px; }
+.logo__accent { font-weight: 700; color: var(--gray-300); margin-left: 4px; }
 
 .nav__list { display: flex; gap: 36px; }
 
