@@ -1,14 +1,19 @@
 /* ===== VARIABLES ===== */
 :root {
-  --primary: #e8512d;
-  --primary-dark: #c93a1a;
-  --accent: #f09030;
-  --gradient: linear-gradient(135deg, #f09030, #e8512d, #d63a4a);
-  --gradient-text: linear-gradient(135deg, #f09030, #e8512d);
-  --dark: #0a0a0f;
-  --dark-2: #12121a;
-  --dark-3: #1a1a2e;
-  --dark-card: #16161f;
+  --primary: #f47429;
+  --primary-dark: #d65b16;
+  --accent: #3fb1ab;
+  --accent-dark: #2d8a85;
+  --navy: #1a3956;
+  --navy-light: #2c5278;
+  --gradient: linear-gradient(135deg, #f9a04a, #f47429, #e85a14);
+  --gradient-text: linear-gradient(135deg, #f9a04a, #f47429);
+  --gradient-teal: linear-gradient(135deg, #4dc7c1, #3fb1ab);
+  --gradient-mix: linear-gradient(135deg, #3fb1ab, #f47429);
+  --dark: #0e1f33;
+  --dark-2: #16293e;
+  --dark-3: #1a3956;
+  --dark-card: #1a3045;
   --gray-900: #111827;
   --gray-800: #1f2937;
   --gray-700: #374151;
@@ -22,8 +27,9 @@
   --white: #ffffff;
   --font-primary: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
-  --shadow-glow: 0 0 30px rgba(232, 81, 45, 0.3);
-  --shadow-glow-lg: 0 0 60px rgba(232, 81, 45, 0.2);
+  --shadow-glow: 0 0 30px rgba(244, 116, 41, 0.3);
+  --shadow-glow-lg: 0 0 60px rgba(244, 116, 41, 0.2);
+  --shadow-glow-teal: 0 0 30px rgba(63, 177, 171, 0.3);
   --shadow: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
   --shadow-md: 0 10px 25px -3px rgba(0,0,0,0.1);
   --shadow-lg: 0 20px 40px -8px rgba(0,0,0,0.12);
@@ -46,7 +52,7 @@ body {
   overflow-x: hidden;
   background: var(--white);
 }
-::selection { background: rgba(232, 81, 45, 0.2); color: var(--dark); }
+::selection { background: rgba(244, 116, 41, 0.2); color: var(--dark); }
 a { text-decoration: none; color: inherit; transition: var(--transition); }
 ul { list-style: none; }
 img { max-width: 100%; display: block; }
@@ -60,7 +66,7 @@ button, input, select, textarea {
   position: fixed;
   width: 600px; height: 600px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(232, 81, 45, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(244, 116, 41, 0.06) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0;
   transform: translate(-50%, -50%);
@@ -138,11 +144,11 @@ button, input, select, textarea {
 .btn--glow {
   background: var(--gradient);
   color: var(--white);
-  box-shadow: 0 4px 20px rgba(232, 81, 45, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 4px 20px rgba(244, 116, 41, 0.35), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 .btn--glow:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 40px rgba(232, 81, 45, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
+  box-shadow: 0 8px 40px rgba(244, 116, 41, 0.5), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 .btn--glow::after {
   content: '';
@@ -189,9 +195,9 @@ button, input, select, textarea {
 .btn--primary {
   background: var(--gradient);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(232, 81, 45, 0.3);
+  box-shadow: 0 4px 15px rgba(244, 116, 41, 0.3);
 }
-.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(232, 81, 45, 0.4); }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(244, 116, 41, 0.4); }
 
 .btn--sm { padding: 10px 24px; font-size: 0.875rem; }
 .btn--full { width: 100%; justify-content: center; }
@@ -235,7 +241,25 @@ button, input, select, textarea {
   height: 80px;
 }
 
-.logo { display: flex; align-items: center; gap: 12px; }
+.logo { display: flex; align-items: center; gap: 10px; }
+.logo__img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* Logo is dark on light bg — invert when on dark backgrounds */
+  filter: brightness(0) invert(1);
+  transition: var(--transition);
+}
+.header.scrolled .logo__img,
+.legal-hero ~ * .logo__img,
+.header.scrolled.nav-open .logo__img {
+  filter: none;
+}
+/* Legal pages: header is always scrolled (light) so logo stays original */
+.header.scrolled .logo__img { filter: none; }
+.header.nav-open .logo__img { filter: brightness(0) invert(1); }
+.logo__img--footer { filter: brightness(0) invert(1); height: 44px; }
 .logo__icon {
   display: flex;
   align-items: center;
@@ -247,7 +271,7 @@ button, input, select, textarea {
   font-weight: 800;
   font-size: 1.2rem;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(232, 81, 45, 0.3);
+  box-shadow: 0 4px 12px rgba(244, 116, 41, 0.3);
 }
 .logo__text {
   font-family: var(--font-primary);
@@ -411,19 +435,19 @@ button, input, select, textarea {
 }
 .hero__mesh-orb--1 {
   width: 600px; height: 600px;
-  background: rgba(232, 81, 45, 0.3);
+  background: rgba(244, 116, 41, 0.3);
   top: -10%; left: -5%;
   animation: meshFloat1 12s ease-in-out infinite;
 }
 .hero__mesh-orb--2 {
   width: 500px; height: 500px;
-  background: rgba(240, 144, 48, 0.2);
+  background: rgba(249, 160, 74, 0.2);
   top: 20%; right: -10%;
   animation: meshFloat2 15s ease-in-out infinite;
 }
 .hero__mesh-orb--3 {
   width: 400px; height: 400px;
-  background: rgba(214, 58, 74, 0.25);
+  background: rgba(232, 90, 20, 0.25);
   bottom: -5%; left: 30%;
   animation: meshFloat3 10s ease-in-out infinite;
 }
@@ -541,13 +565,13 @@ button, input, select, textarea {
 .hero__ring {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(232, 81, 45, 0.15);
+  border: 1px solid rgba(244, 116, 41, 0.15);
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
   animation: spin 20s linear infinite;
 }
 .hero__ring--1 { width: 280px; height: 280px; }
-.hero__ring--2 { width: 360px; height: 360px; animation-duration: 30s; animation-direction: reverse; border-color: rgba(240, 144, 48, 0.1); }
+.hero__ring--2 { width: 360px; height: 360px; animation-duration: 30s; animation-direction: reverse; border-color: rgba(249, 160, 74, 0.1); }
 .hero__ring--3 { width: 440px; height: 440px; animation-duration: 40s; border-color: rgba(255,255,255,0.05); }
 @keyframes spin { from { transform: translate(-50%, -50%) rotate(0deg); } to { transform: translate(-50%, -50%) rotate(360deg); } }
 
@@ -563,7 +587,7 @@ button, input, select, textarea {
   justify-content: center;
   font-size: 2.25rem;
   color: var(--white);
-  box-shadow: 0 0 60px rgba(232, 81, 45, 0.4), 0 0 120px rgba(232, 81, 45, 0.2);
+  box-shadow: 0 0 60px rgba(244, 116, 41, 0.4), 0 0 120px rgba(244, 116, 41, 0.2);
 }
 
 .hero__float {
@@ -717,7 +741,7 @@ button, input, select, textarea {
   font-size: 1.3rem;
   color: var(--white);
   margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(232, 81, 45, 0.25);
+  box-shadow: 0 4px 12px rgba(244, 116, 41, 0.25);
 }
 .solution-card h3 {
   font-family: var(--font-primary);
@@ -737,7 +761,7 @@ button, input, select, textarea {
   font-size: 0.7rem;
   font-weight: 600;
   padding: 4px 10px;
-  background: linear-gradient(135deg, rgba(240,144,48,0.1), rgba(232,81,45,0.1));
+  background: linear-gradient(135deg, rgba(249,160,74,0.1), rgba(232,81,45,0.1));
   color: var(--primary);
   border-radius: var(--radius-full);
 }
@@ -802,7 +826,7 @@ button, input, select, textarea {
   position: absolute;
   top: 0; left: 0; bottom: 0;
   width: var(--width);
-  background: linear-gradient(90deg, rgba(232,81,45,0.15), rgba(240,144,48,0.05));
+  background: linear-gradient(90deg, rgba(232,81,45,0.15), rgba(249,160,74,0.05));
   border-radius: 14px;
 }
 .speed__metric-info {
@@ -835,7 +859,7 @@ button, input, select, textarea {
 }
 .speed__feature-icon {
   width: 48px; height: 48px; min-width: 48px;
-  background: rgba(232, 81, 45, 0.1);
+  background: rgba(244, 116, 41, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
@@ -880,7 +904,7 @@ button, input, select, textarea {
   justify-content: center;
   font-size: 1.5rem;
   color: var(--white);
-  box-shadow: 0 4px 12px rgba(232, 81, 45, 0.25);
+  box-shadow: 0 4px 12px rgba(244, 116, 41, 0.25);
 }
 .team__role h3 {
   font-family: var(--font-primary);
@@ -916,7 +940,7 @@ button, input, select, textarea {
 .about__feature { display: flex; gap: 16px; align-items: flex-start; }
 .about__feature-icon {
   width: 52px; height: 52px; min-width: 52px;
-  background: linear-gradient(135deg, rgba(240,144,48,0.08), rgba(232,81,45,0.08));
+  background: linear-gradient(135deg, rgba(249,160,74,0.08), rgba(232,81,45,0.08));
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -1051,7 +1075,7 @@ button, input, select, textarea {
 
 .service-card__icon {
   width: 52px; height: 52px;
-  background: rgba(232, 81, 45, 0.1);
+  background: rgba(244, 116, 41, 0.1);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -1180,7 +1204,7 @@ button, input, select, textarea {
 .industry-card__icon {
   width: 68px; height: 68px;
   margin: 0 auto 20px;
-  background: linear-gradient(135deg, rgba(240,144,48,0.08), rgba(232,81,45,0.08));
+  background: linear-gradient(135deg, rgba(249,160,74,0.08), rgba(232,81,45,0.08));
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -1252,7 +1276,7 @@ button, input, select, textarea {
   color: var(--primary);
   text-transform: uppercase;
   letter-spacing: 2px;
-  background: linear-gradient(135deg, rgba(240,144,48,0.1), rgba(232,81,45,0.1));
+  background: linear-gradient(135deg, rgba(249,160,74,0.1), rgba(232,81,45,0.1));
   padding: 6px 14px;
   border-radius: var(--radius-full);
   margin-bottom: 16px;
@@ -1378,13 +1402,13 @@ button, input, select, textarea {
 }
 .cta__mesh-orb--1 {
   width: 400px; height: 400px;
-  background: rgba(232, 81, 45, 0.2);
+  background: rgba(244, 116, 41, 0.2);
   top: -20%; left: 20%;
   animation: meshFloat1 10s ease-in-out infinite;
 }
 .cta__mesh-orb--2 {
   width: 300px; height: 300px;
-  background: rgba(240, 144, 48, 0.15);
+  background: rgba(249, 160, 74, 0.15);
   bottom: -20%; right: 20%;
   animation: meshFloat2 12s ease-in-out infinite;
 }
@@ -1433,7 +1457,7 @@ button, input, select, textarea {
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  box-shadow: 0 4px 12px rgba(232, 81, 45, 0.25);
+  box-shadow: 0 4px 12px rgba(244, 116, 41, 0.25);
 }
 .contact__detail h4 {
   font-family: var(--font-primary);
@@ -1500,7 +1524,7 @@ button, input, select, textarea {
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 4px rgba(232, 81, 45, 0.08);
+  box-shadow: 0 0 0 4px rgba(244, 116, 41, 0.08);
   background: var(--white);
 }
 .form-group textarea { resize: vertical; min-height: 120px; }
@@ -1583,13 +1607,13 @@ button, input, select, textarea {
   align-items: center;
   justify-content: center;
   font-size: 1.2rem;
-  box-shadow: 0 8px 30px rgba(232, 81, 45, 0.4);
+  box-shadow: 0 8px 30px rgba(244, 116, 41, 0.4);
   z-index: 999;
   transition: var(--transition);
 }
 .floating-btn:hover {
   transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 12px 40px rgba(232, 81, 45, 0.5);
+  box-shadow: 0 12px 40px rgba(244, 116, 41, 0.5);
 }
 
 /* ===== RESPONSIVE ===== */
