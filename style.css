@@ -262,7 +262,7 @@ button, input, select, textarea {
   background: var(--dark);
   border-bottom-color: rgba(255,255,255,0.08);
 }
-.header.nav-open .logo__text { color: var(--white); }
+.header.nav-open .logo__brand { color: var(--white); }
 .header.nav-open .logo__accent { color: var(--gray-400); }
 .header__inner {
   display: flex;
@@ -271,23 +271,38 @@ button, input, select, textarea {
   height: 80px;
 }
 
-.logo { display: flex; align-items: center; gap: 10px; }
+.logo { display: flex; align-items: center; gap: 14px; }
 .logo__svg {
-  height: 56px;
-  width: 56px;
+  height: 72px;
+  width: 72px;
   display: block;
   object-fit: contain;
   flex-shrink: 0;
 }
 .logo__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 4px;
+}
+.logo__brand {
   font-family: var(--font-primary);
   font-weight: 800;
-  font-size: 1.45rem;
+  font-size: 1.7rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: var(--white);
 }
-.header.scrolled .logo__text { color: var(--dark); }
+.logo__accent {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gray-300);
+}
+.header.scrolled .logo__brand { color: var(--dark); }
 .header.scrolled .logo__accent { color: var(--gray-500); }
-.logo__accent { font-weight: 700; color: var(--gray-300); margin-left: 4px; }
 
 .nav__list { display: flex; gap: 36px; }
 
@@ -1576,7 +1591,7 @@ button, input, select, textarea {
   margin-top: 16px;
   max-width: 300px;
 }
-.footer__brand .logo__text { color: var(--white); }
+.footer__brand .logo__brand { color: var(--white); }
 .footer__brand .logo__accent { color: var(--gray-500); }
 .footer__socials { display: flex; gap: 10px; margin-top: 24px; }
 .footer__socials a {
