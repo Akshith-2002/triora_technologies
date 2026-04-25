@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="192" height="192">
+    <defs>
+        <linearGradient id="tealGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#0284c7" />
+            <stop offset="100%" stop-color="#2dd4bf" />
+        </linearGradient>
+        <linearGradient id="orangeGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ea580c" />
+            <stop offset="100%" stop-color="#fbd38d" />
+        </linearGradient>
+    </defs>
+    
+    <!-- Sparkle -->
+    <path d="M 45 35 C 48 35 50 28 50 25 C 50 28 52 35 55 35 C 52 35 50 42 50 45 C 50 42 48 35 45 35 Z" fill="url(#orangeGrad)" />
+    
+    <!-- Left T-Bar and Stem -->
+    <path d="M 20 45 C 20 40 24 36 29 36 L 50 36 C 53 36 55 38 55 41 L 55 52 C 55 55 53 57 50 57 L 40 57 L 40 90 C 40 95 36 99 31 99 L 20 99 L 20 45 Z" fill="url(#tealGrad)" />
+    
+    <!-- Sweeping Arrow Right Side -->
+    <path d="M 42 80 C 60 80 72 62 82 48 L 92 36 L 75 36 C 65 48 53 62 42 62 Z" fill="url(#orangeGrad)" />
+    
+    <!-- Arrowhead -->
+    <polygon points="75,36 102,25 91,52" fill="url(#orangeGrad)" />
+</svg>
