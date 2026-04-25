@@ -10,15 +10,15 @@
     </linearGradient>
   </defs>
 
-  <!-- Sparkle (creativity / aha moment) -->
-  <path d="M 45 35 C 48 35 50 28 50 25 C 50 28 52 35 55 35 C 52 35 50 42 50 45 C 50 42 48 35 45 35 Z" fill="url(#orangeGrad)"/>
+  <!-- T horizontal top bar -->
+  <rect x="6" y="20" width="70" height="22" rx="5" fill="url(#tealGrad)"/>
 
-  <!-- T-Bar and Stem (technological grounding) -->
-  <path d="M 20 45 C 20 40 24 36 29 36 L 50 36 C 53 36 55 38 55 41 L 55 52 C 55 55 53 57 50 57 L 40 57 L 40 90 C 40 95 36 99 31 99 L 20 99 L 20 45 Z" fill="url(#tealGrad)"/>
+  <!-- T vertical stem with rounded bottom-left flourish -->
+  <path d="M 30 20 L 52 20 L 52 100 Q 52 110 42 110 L 30 110 Z" fill="url(#tealGrad)"/>
 
-  <!-- Sweeping Arrow (innovation / growth) -->
-  <path d="M 42 80 C 60 80 72 62 82 48 L 92 36 L 75 36 C 65 48 53 62 42 62 Z" fill="url(#orangeGrad)"/>
+  <!-- Sweeping orange arrow (innovation / growth) -->
+  <path d="M 55 75 L 92 38 L 84 30 L 112 26 L 108 54 L 100 46 L 65 85 Z" fill="url(#orangeGrad)"/>
 
-  <!-- Arrowhead -->
-  <polygon points="75,36 102,25 91,52" fill="url(#orangeGrad)"/>
+  <!-- Sparkle accent (creativity / aha moment) -->
+  <path d="M 90 4 L 92 11 L 99 13 L 92 15 L 90 22 L 88 15 L 81 13 L 88 11 Z" fill="url(#orangeGrad)"/>
 </svg>
