@@ -22,6 +22,15 @@ function animateGlow() {
 }
 animateGlow();
 
+// ===== CARD SPOTLIGHT (cursor-following glow) =====
+document.querySelectorAll('.spotlight').forEach(el => {
+  el.addEventListener('mousemove', (e) => {
+    const rect = el.getBoundingClientRect();
+    el.style.setProperty('--sx', (e.clientX - rect.left) + 'px');
+    el.style.setProperty('--sy', (e.clientY - rect.top) + 'px');
+  });
+});
+
 // ===== HEADER SCROLL =====
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {

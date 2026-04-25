@@ -10,7 +10,7 @@
   --navy-light: #1e293b;
   --canvas: #f8fafc;            /* Canvas White */
   --gradient: linear-gradient(135deg, #fb923c, #f97316, #ea580c);
-  --gradient-text: linear-gradient(135deg, #fb923c, #f97316);
+  --gradient-text: linear-gradient(135deg, #0ea5e9, #f97316);
   --gradient-teal: linear-gradient(135deg, #38bdf8, #0ea5e9);
   --gradient-mix: linear-gradient(135deg, #0ea5e9, #f97316);
   --dark: #0f172a;
@@ -77,6 +77,33 @@ button, input, select, textarea {
   opacity: 0;
 }
 .cursor-glow.active { opacity: 1; }
+
+/* ===== CARD SPOTLIGHT (cursor-following glow) ===== */
+.spotlight {
+  --sx: 50%;
+  --sy: 50%;
+  position: relative;
+  isolation: isolate;
+}
+.spotlight::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(420px circle at var(--sx) var(--sy), rgba(249, 115, 22, 0.10), transparent 45%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  z-index: 1;
+}
+.spotlight:hover::after { opacity: 1; }
+.spotlight--teal::after {
+  background: radial-gradient(420px circle at var(--sx) var(--sy), rgba(14, 165, 233, 0.18), transparent 45%);
+}
+.spotlight > * { position: relative; z-index: 2; }
+@media (hover: none) {
+  .spotlight::after { display: none; }
+}
 
 /* ===== UTILITIES ===== */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
@@ -432,7 +459,7 @@ button, input, select, textarea {
 }
 .hero__mesh-orb--4 {
   width: 300px; height: 300px;
-  background: rgba(168, 85, 247, 0.15);
+  background: rgba(14, 165, 233, 0.18);
   top: 40%; left: 50%;
   animation: meshFloat4 18s ease-in-out infinite;
 }
@@ -558,15 +585,39 @@ button, input, select, textarea {
   position: absolute;
   top: 50%; left: 50%;
   transform: translate(-50%, -50%);
-  width: 90px; height: 90px;
+  width: 100px; height: 100px;
   background: var(--gradient);
-  border-radius: 24px;
+  border-radius: 26px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 2.25rem;
   color: var(--white);
   box-shadow: 0 0 60px rgba(249, 115, 22, 0.4), 0 0 120px rgba(249, 115, 22, 0.2);
+  animation: markPulse 4s ease-in-out infinite;
+}
+.hero__center-mark {
+  width: 58%;
+  height: 58%;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.18));
+}
+.hero__center-sparkle {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 26px;
+  height: 26px;
+  fill: var(--accent-light);
+  filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.7));
+  transform-origin: center;
+  animation: sparkleTwinkle 2.6s ease-in-out infinite;
+}
+@keyframes markPulse {
+  0%, 100% { box-shadow: 0 0 60px rgba(249, 115, 22, 0.4), 0 0 120px rgba(249, 115, 22, 0.2); }
+  50%      { box-shadow: 0 0 80px rgba(249, 115, 22, 0.55), 0 0 160px rgba(14, 165, 233, 0.18); }
+}
+@keyframes sparkleTwinkle {
+  0%, 100% { transform: scale(1) rotate(0deg);   opacity: 0.85; }
+  50%      { transform: scale(1.25) rotate(45deg); opacity: 1; }
 }
 
 .hero__float {
@@ -987,11 +1038,11 @@ button, input, select, textarea {
 .about__bento-card p { font-size: 0.85rem; color: var(--gray-500); }
 
 .about__bento-card--1 { background: linear-gradient(135deg, #fff7ed, #fff); }
-.about__bento-card--1 .about__bento-icon { background: #f09030; color: var(--white); }
+.about__bento-card--1 .about__bento-icon { background: #fb923c; color: var(--white); }
 .about__bento-card--2 { background: linear-gradient(135deg, #fef2f0, #fff); }
-.about__bento-card--2 .about__bento-icon { background: #e8512d; color: var(--white); }
-.about__bento-card--3 { background: linear-gradient(135deg, #eef2ff, #fff); }
-.about__bento-card--3 .about__bento-icon { background: #4f7df3; color: var(--white); }
+.about__bento-card--2 .about__bento-icon { background: #ea580c; color: var(--white); }
+.about__bento-card--3 { background: linear-gradient(135deg, #f0f9ff, #fff); }
+.about__bento-card--3 .about__bento-icon { background: #0ea5e9; color: var(--white); }
 .about__bento-card--4 { background: linear-gradient(135deg, #ecfdf5, #fff); }
 .about__bento-card--4 .about__bento-icon { background: #2dbd6e; color: var(--white); }
 

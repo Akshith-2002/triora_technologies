@@ -198,7 +198,14 @@
           <div class="hero__ring hero__ring--1"></div>
           <div class="hero__ring hero__ring--2"></div>
           <div class="hero__ring hero__ring--3"></div>
-          <div class="hero__center-icon"><i class="fas fa-brain"></i></div>
+          <div class="hero__center-icon">
+            <svg class="hero__center-mark" viewBox="0 0 100 100" aria-hidden="true">
+              <path d="M12 44 L50 8 L88 44 L76 44 L60 28 L60 88 L40 88 L40 28 L24 44 Z" fill="currentColor"/>
+            </svg>
+            <svg class="hero__center-sparkle" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0 L14 9 L24 12 L14 15 L12 24 L10 15 L0 12 L10 9 Z"/>
+            </svg>
+          </div>
           <div class="hero__float hero__float--1">
             <i class="fas fa-cloud"></i>
             <span>Cloud</span>
@@ -289,37 +296,37 @@
     </div>
     <div class="solutions__carousel reveal">
       <div class="solutions__track" id="solutionsTrack">
-        <div class="solution-card">
+        <div class="solution-card spotlight">
           <div class="solution-card__icon"><i class="fas fa-passport"></i></div>
           <h3>Visa Process Automation</h3>
           <p>End-to-end visa application workflow — document collection, form filling, status tracking & notifications. Built on n8n.</p>
           <div class="solution-card__tags"><span>n8n</span><span>AI Agent</span><span>Automation</span></div>
         </div>
-        <div class="solution-card">
+        <div class="solution-card spotlight">
           <div class="solution-card__icon"><i class="fas fa-share-nodes"></i></div>
           <h3>Social Media Automation</h3>
           <p>AI-powered content generation, scheduling, cross-platform posting & engagement analytics. Fully automated pipeline.</p>
           <div class="solution-card__tags"><span>ChatGPT</span><span>n8n</span><span>Multi-platform</span></div>
         </div>
-        <div class="solution-card">
+        <div class="solution-card spotlight">
           <div class="solution-card__icon"><i class="fas fa-headset"></i></div>
           <h3>AI Support Agent</h3>
           <p>Intelligent customer support chatbot with context memory, ticket routing & escalation. Resolves 80% of queries autonomously.</p>
           <div class="solution-card__tags"><span>ChatGPT</span><span>LLM</span><span>RAG</span></div>
         </div>
-        <div class="solution-card">
+        <div class="solution-card spotlight">
           <div class="solution-card__icon"><i class="fas fa-spider"></i></div>
           <h3>Data Scraping Engine</h3>
           <p>Scalable web scraping pipelines with anti-detection, data cleaning & structured output. Handles 100K+ pages.</p>
           <div class="solution-card__tags"><span>Python</span><span>n8n</span><span>Automation</span></div>
         </div>
-        <div class="solution-card">
+        <div class="solution-card spotlight">
           <div class="solution-card__icon"><i class="fas fa-receipt"></i></div>
           <h3>Corporate Splitwise</h3>
           <p>Expense splitting & reimbursement platform for corporate teams. Automated approvals, GST-compliant invoicing.</p>
           <div class="solution-card__tags"><span>Full-Stack</span><span>Automation</span><span>FinOps</span></div>
         </div>
-        <div class="solution-card">
+        <div class="solution-card spotlight">
           <div class="solution-card__icon"><i class="fas fa-bullseye"></i></div>
           <h3>Marketing E2E Automation</h3>
           <p>Go-to-market pipeline with UTM builder, campaign tracker, lead scoring & analytics dashboard. Zero manual work.</p>
@@ -412,25 +419,25 @@
         <p class="section-subtitle">Every team member is an AI engineer first — we don't just use AI, we think in AI</p>
       </div>
       <div class="team__grid">
-        <div class="team__role reveal">
+        <div class="team__role spotlight reveal">
           <div class="team__role-icon"><i class="fas fa-brain"></i></div>
           <h3>AI Engineers</h3>
           <p>Prompt engineering, LLM fine-tuning, RAG pipelines, AI agents</p>
           <div class="team__role-tools">ChatGPT &middot; Claude &middot; LangChain</div>
         </div>
-        <div class="team__role reveal">
+        <div class="team__role spotlight reveal">
           <div class="team__role-icon"><i class="fas fa-diagram-project"></i></div>
           <h3>Automation Architects</h3>
           <p>Workflow design, n8n pipelines, system integration, data orchestration</p>
           <div class="team__role-tools">n8n &middot; Make &middot; Zapier</div>
         </div>
-        <div class="team__role reveal">
+        <div class="team__role spotlight reveal">
           <div class="team__role-icon"><i class="fas fa-code"></i></div>
           <h3>Full-Stack Developers</h3>
           <p>Web & mobile apps, APIs, databases, cloud infrastructure</p>
           <div class="team__role-tools">React &middot; Node.js &middot; Python &middot; AWS</div>
         </div>
-        <div class="team__role reveal">
+        <div class="team__role spotlight reveal">
           <div class="team__role-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
           <h3>AI Product Builders</h3>
           <p>Rapid prototyping with AI-native tools, from idea to deployed product</p>
@@ -610,7 +617,7 @@
         <p class="section-subtitle">Real AI solutions deployed for real businesses</p>
       </div>
       <div class="work__grid">
-        <div class="work-card reveal">
+        <div class="work-card spotlight reveal">
           <div class="work-card__number">01</div>
           <div class="work-card__badge">Automation</div>
           <h3 class="work-card__title">Visa Process Automation</h3>
@@ -626,7 +633,7 @@
             </div>
           </div>
         </div>
-        <div class="work-card reveal">
+        <div class="work-card spotlight reveal">
           <div class="work-card__number">02</div>
           <div class="work-card__badge">AI Agent</div>
           <h3 class="work-card__title">AI Customer Support Agent</h3>
@@ -642,7 +649,7 @@
             </div>
           </div>
         </div>
-        <div class="work-card reveal">
+        <div class="work-card spotlight reveal">
           <div class="work-card__number">03</div>
           <div class="work-card__badge">Marketing</div>
           <h3 class="work-card__title">E2E Marketing Automation</h3>
@@ -670,7 +677,7 @@
         <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
       </div>
       <div class="testimonials__grid">
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card spotlight reveal">
           <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-card__text">"Triora Technologies transformed our legacy systems into a modern, scalable platform. Their team's expertise in cloud architecture was exactly what we needed."</p>
           <div class="testimonial-card__author">
@@ -684,7 +691,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card spotlight reveal">
           <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-card__text">"Working with Triora felt like having an in-house team. They understood our business from day one and delivered a product that exceeded our expectations."</p>
           <div class="testimonial-card__author">
@@ -698,7 +705,7 @@
             </div>
           </div>
         </div>
-        <div class="testimonial-card reveal">
+        <div class="testimonial-card spotlight reveal">
           <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
           <p class="testimonial-card__text">"The AI solution Triora built for our logistics operations reduced operational costs by 35%. Their team is technically brilliant and incredibly responsive."</p>
           <div class="testimonial-card__author">
