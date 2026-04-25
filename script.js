@@ -195,6 +195,27 @@ if (solTrack && solPrev && solNext) {
   });
 }
 
+// ===== TOAST (coming-soon notifier) =====
+const toastEl = document.getElementById('toast');
+const toastText = toastEl ? toastEl.querySelector('.toast__text') : null;
+let toastTimer;
+function showToast(message) {
+  if (!toastEl || !toastText) return;
+  toastText.innerHTML = message;
+  toastEl.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toastEl.classList.remove('show'), 2400);
+}
+
+document.querySelectorAll('.contact__socials a, .footer__socials a, .mobile-nav__footer a[href="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const platform = link.getAttribute('aria-label') || 'This channel';
+    showToast(`<strong>${platform}</strong> &mdash; coming soon`);
+  });
+});
+
 // ===== PARALLAX ON HERO MESH ORBS =====
 const heroMesh = document.querySelector('.hero__mesh');
 if (heroMesh) {

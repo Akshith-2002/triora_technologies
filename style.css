@@ -1661,6 +1661,44 @@ button, input, select, textarea {
   box-shadow: 0 12px 40px rgba(249, 115, 22, 0.5);
 }
 
+/* ===== TOAST ===== */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--dark);
+  color: var(--white);
+  padding: 14px 22px;
+  border-radius: 14px;
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.06);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
+  z-index: 100002;
+  max-width: calc(100vw - 32px);
+}
+.toast.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+.toast i {
+  color: var(--accent-light);
+  font-size: 0.95rem;
+}
+.toast__text strong { font-weight: 700; color: var(--white); }
+@media (max-width: 480px) {
+  .toast { bottom: 80px; font-size: 0.85rem; padding: 12px 18px; }
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .services__grid { grid-template-columns: repeat(2, 1fr); }
