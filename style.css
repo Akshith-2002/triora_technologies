@@ -242,36 +242,12 @@ button, input, select, textarea {
 }
 
 .logo { display: flex; align-items: center; gap: 10px; }
-.logo__img {
-  height: 48px;
-  width: auto;
+.logo__svg {
+  height: 40px;
+  width: 40px;
   display: block;
   object-fit: contain;
-  /* Logo is dark on light bg — invert when on dark backgrounds */
-  filter: brightness(0) invert(1);
-  transition: var(--transition);
-}
-.header.scrolled .logo__img,
-.legal-hero ~ * .logo__img,
-.header.scrolled.nav-open .logo__img {
-  filter: none;
-}
-/* Legal pages: header is always scrolled (light) so logo stays original */
-.header.scrolled .logo__img { filter: none; }
-.header.nav-open .logo__img { filter: brightness(0) invert(1); }
-.logo__img--footer { filter: brightness(0) invert(1); height: 44px; }
-.logo__icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px; height: 42px;
-  background: var(--gradient);
-  color: var(--white);
-  font-family: var(--font-primary);
-  font-weight: 800;
-  font-size: 1.2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(244, 116, 41, 0.3);
+  flex-shrink: 0;
 }
 .logo__text {
   font-family: var(--font-primary);
