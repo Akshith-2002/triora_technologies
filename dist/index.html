@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Triora Technologies | Engineering Tomorrow's Digital Landscape</title>
+  <meta name="description" content="Triora Technologies is a Bangalore-based IT services company offering web development, app development, cloud architecture, AI/ML solutions, cybersecurity, DevOps, and IT consulting.">
+  <meta name="keywords" content="IT services Bangalore, web development, app development, cloud architecture, AI ML solutions, cybersecurity, DevOps, IT consulting, Triora Technologies, software development company India">
+  <meta name="author" content="Triora Technologies">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#f97316">
+  <link rel="canonical" href="https://trioratechnologies.com/">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/favicon-192x192.png">
+  <link rel="apple-touch-icon" href="favicons/favicon-192x192.png">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Triora Technologies | Engineering Tomorrow's Digital Landscape">
+  <meta property="og:description" content="Bangalore-based IT services company offering web & app development, cloud architecture, AI/ML, cybersecurity, DevOps, and IT consulting.">
+  <meta property="og:url" content="https://trioratechnologies.com/">
+  <meta property="og:site_name" content="Triora Technologies">
+  <meta property="og:locale" content="en_IN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Triora Technologies | Engineering Tomorrow's Digital Landscape">
+  <meta name="twitter:description" content="Bangalore-based IT services — web dev, cloud, AI/ML, cybersecurity, DevOps & consulting.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Triora Technologies",
+    "url": "https://trioratechnologies.com",
+    "logo": "https://trioratechnologies.com/logo.png",
+    "description": "Triora Technologies is a Bangalore-based IT services company helping businesses navigate digital transformation with web development, app development, cloud architecture, AI/ML, cybersecurity, DevOps, and IT consulting.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "HAL",
+      "addressLocality": "Bangalore",
+      "addressRegion": "Karnataka",
+      "addressCountry": "IN"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9019533772",
+      "contactType": "sales",
+      "email": "akshithy888@gmail.com",
+      "areaServed": ["IN", "US", "GB", "AE"],
+      "availableLanguage": ["English", "Hindi"]
+    },
+    "sameAs": [],
+    "foundingLocation": "Bangalore, India",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      "geoRadius": "50000"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Triora Technologies",
+    "url": "https://trioratechnologies.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://trioratechnologies.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "IT Services by Triora Technologies",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Web Development", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 2, "name": "App Development", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 3, "name": "Cloud Architecture", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 4, "name": "AI & ML Solutions", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 5, "name": "Cybersecurity", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 6, "name": "DevOps & SRE", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 7, "name": "Managed IT Services", "url": "https://trioratechnologies.com/#services" },
+      { "@type": "ListItem", "position": 8, "name": "IT Consulting", "url": "https://trioratechnologies.com/#services" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">
+        <img src="triora_icon.png" alt="" class="logo__svg">
+        <span class="logo__text"><span class="logo__brand">Triora</span><span class="logo__accent">Technologies</span></span>
+      </a>
+      <nav class="nav nav--desktop" id="navDesktop">
+        <ul class="nav__list">
+          <li><a href="#solutions" class="nav__link">Solutions</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#services" class="nav__link">Services</a></li>
+          <li><a href="#work" class="nav__link">Our Work</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="#contact" class="btn btn--primary btn--sm">Get a Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay (outside header to avoid stacking context issues) -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav__inner">
+      <ul class="mobile-nav__list">
+        <li><a href="#home" class="mobile-nav__link">Home</a></li>
+        <li><a href="#solutions" class="mobile-nav__link">Solutions</a></li>
+        <li><a href="#about" class="mobile-nav__link">About</a></li>
+        <li><a href="#services" class="mobile-nav__link">Services</a></li>
+        <li><a href="#work" class="mobile-nav__link">Our Work</a></li>
+        <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="mobile-nav__cta btn btn--glow">
+        Get a Quote <i class="fas fa-arrow-right"></i>
+      </a>
+      <div class="mobile-nav__footer">
+        <a href="tel:+919019533772" aria-label="Call us"><i class="fas fa-phone"></i></a>
+        <a href="mailto:akshithy888@gmail.com" aria-label="Email us"><i class="fas fa-envelope"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero__mesh">
+      <div class="hero__mesh-orb hero__mesh-orb--1"></div>
+      <div class="hero__mesh-orb hero__mesh-orb--2"></div>
+      <div class="hero__mesh-orb hero__mesh-orb--3"></div>
+      <div class="hero__mesh-orb hero__mesh-orb--4"></div>
+    </div>
+    <div class="hero__noise"></div>
+    <div class="hero__grid-pattern"></div>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <div class="hero__badge reveal">
+          <span class="hero__badge-dot"></span>
+          AI-First Development Company
+        </div>
+        <h1 class="hero__title reveal">
+          <span class="gradient-text">AI-Led Development</span><br>
+          at Lightning Speed
+        </h1>
+        <p class="hero__subtitle reveal">
+          We build intelligent automations, AI agents, and scalable products
+          powered by cutting-edge AI — delivered in days, not months.
+        </p>
+        <div class="hero__cta reveal">
+          <a href="#contact" class="btn btn--glow">
+            Book a Consultation
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="#solutions" class="btn btn--glass">
+            <i class="fas fa-bolt"></i>
+            See Our Solutions
+          </a>
+        </div>
+      </div>
+      <div class="hero__visual reveal">
+        <div class="hero__graphic">
+          <div class="hero__ring hero__ring--1"></div>
+          <div class="hero__ring hero__ring--2"></div>
+          <div class="hero__ring hero__ring--3"></div>
+          <div class="hero__center-icon">
+            <svg class="hero__center-mark" viewBox="0 0 100 100" aria-hidden="true">
+              <path d="M12 44 L50 8 L88 44 L76 44 L60 28 L60 88 L40 88 L40 28 L24 44 Z" fill="currentColor"/>
+            </svg>
+            <svg class="hero__center-sparkle" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 0 L14 9 L24 12 L14 15 L12 24 L10 15 L0 12 L10 9 Z"/>
+            </svg>
+          </div>
+          <div class="hero__float hero__float--1">
+            <i class="fas fa-cloud"></i>
+            <span>Cloud</span>
+          </div>
+          <div class="hero__float hero__float--2">
+            <i class="fas fa-shield-halved"></i>
+            <span>Security</span>
+          </div>
+          <div class="hero__float hero__float--3">
+            <i class="fas fa-brain"></i>
+            <span>AI/ML</span>
+          </div>
+          <div class="hero__float hero__float--4">
+            <i class="fas fa-gears"></i>
+            <span>Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero__stats">
+      <div class="container">
+        <div class="hero__stats-grid">
+          <div class="hero__stat reveal">
+            <span class="hero__stat-number" data-target="10">0</span><span class="hero__stat-suffix">+</span>
+            <span class="hero__stat-label">Automations Shipped</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat reveal">
+            <span class="hero__stat-number" data-target="3">0</span><span class="hero__stat-suffix">x</span>
+            <span class="hero__stat-label">Faster Delivery</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat reveal">
+            <span class="hero__stat-number" data-target="98">0</span><span class="hero__stat-suffix">%</span>
+            <span class="hero__stat-label">Client Satisfaction</span>
+          </div>
+          <div class="hero__stat-divider"></div>
+          <div class="hero__stat reveal">
+            <span class="hero__stat-number" data-target="48">0</span><span class="hero__stat-suffix">hr</span>
+            <span class="hero__stat-label">Avg. Turnaround</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Tools Marquee -->
+  <section class="marquee">
+    <div class="marquee__label">Powered By</div>
+    <div class="marquee__track">
+      <div class="marquee__content">
+        <span class="marquee__item"><i class="fas fa-robot"></i> ChatGPT</span>
+        <span class="marquee__item"><i class="fas fa-diagram-project"></i> n8n</span>
+        <span class="marquee__item"><i class="fas fa-heart"></i> Lovable</span>
+        <span class="marquee__item"><i class="fas fa-message"></i> Claude AI</span>
+        <span class="marquee__item"><i class="fas fa-bolt"></i> Cursor</span>
+        <span class="marquee__item"><i class="fab fa-python"></i> Python</span>
+        <span class="marquee__item"><i class="fab fa-react"></i> React</span>
+        <span class="marquee__item"><i class="fab fa-node-js"></i> Node.js</span>
+        <span class="marquee__item"><i class="fab fa-aws"></i> AWS</span>
+        <span class="marquee__item"><i class="fab fa-docker"></i> Docker</span>
+        <span class="marquee__item"><i class="fas fa-brain"></i> TensorFlow</span>
+        <span class="marquee__item"><i class="fas fa-database"></i> PostgreSQL</span>
+        <span class="marquee__item"><i class="fas fa-robot"></i> ChatGPT</span>
+        <span class="marquee__item"><i class="fas fa-diagram-project"></i> n8n</span>
+        <span class="marquee__item"><i class="fas fa-heart"></i> Lovable</span>
+        <span class="marquee__item"><i class="fas fa-message"></i> Claude AI</span>
+        <span class="marquee__item"><i class="fas fa-bolt"></i> Cursor</span>
+        <span class="marquee__item"><i class="fab fa-python"></i> Python</span>
+        <span class="marquee__item"><i class="fab fa-react"></i> React</span>
+        <span class="marquee__item"><i class="fab fa-node-js"></i> Node.js</span>
+        <span class="marquee__item"><i class="fab fa-aws"></i> AWS</span>
+        <span class="marquee__item"><i class="fab fa-docker"></i> Docker</span>
+        <span class="marquee__item"><i class="fas fa-brain"></i> TensorFlow</span>
+        <span class="marquee__item"><i class="fas fa-database"></i> PostgreSQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions / Automations Carousel -->
+  <section class="solutions" id="solutions">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Ready-to-Deploy Solutions</p>
+        <h2 class="section-title">AI Automations We've <span class="gradient-text">Shipped</span></h2>
+        <p class="section-subtitle">Production-ready solutions built with n8n, ChatGPT & custom AI agents</p>
+      </div>
+    </div>
+    <div class="solutions__carousel reveal">
+      <div class="solutions__track" id="solutionsTrack">
+        <div class="solution-card spotlight">
+          <div class="solution-card__icon"><i class="fas fa-passport"></i></div>
+          <h3>Visa Process Automation</h3>
+          <p>End-to-end visa application workflow — document collection, form filling, status tracking & notifications. Built on n8n.</p>
+          <div class="solution-card__tags"><span>n8n</span><span>AI Agent</span><span>Automation</span></div>
+        </div>
+        <div class="solution-card spotlight">
+          <div class="solution-card__icon"><i class="fas fa-share-nodes"></i></div>
+          <h3>Social Media Automation</h3>
+          <p>AI-powered content generation, scheduling, cross-platform posting & engagement analytics. Fully automated pipeline.</p>
+          <div class="solution-card__tags"><span>ChatGPT</span><span>n8n</span><span>Multi-platform</span></div>
+        </div>
+        <div class="solution-card spotlight">
+          <div class="solution-card__icon"><i class="fas fa-headset"></i></div>
+          <h3>AI Support Agent</h3>
+          <p>Intelligent customer support chatbot with context memory, ticket routing & escalation. Resolves 80% of queries autonomously.</p>
+          <div class="solution-card__tags"><span>ChatGPT</span><span>LLM</span><span>RAG</span></div>
+        </div>
+        <div class="solution-card spotlight">
+          <div class="solution-card__icon"><i class="fas fa-spider"></i></div>
+          <h3>Data Scraping Engine</h3>
+          <p>Scalable web scraping pipelines with anti-detection, data cleaning & structured output. Handles 100K+ pages.</p>
+          <div class="solution-card__tags"><span>Python</span><span>n8n</span><span>Automation</span></div>
+        </div>
+        <div class="solution-card spotlight">
+          <div class="solution-card__icon"><i class="fas fa-receipt"></i></div>
+          <h3>Corporate Splitwise</h3>
+          <p>Expense splitting & reimbursement platform for corporate teams. Automated approvals, GST-compliant invoicing.</p>
+          <div class="solution-card__tags"><span>Full-Stack</span><span>Automation</span><span>FinOps</span></div>
+        </div>
+        <div class="solution-card spotlight">
+          <div class="solution-card__icon"><i class="fas fa-bullseye"></i></div>
+          <h3>Marketing E2E Automation</h3>
+          <p>Go-to-market pipeline with UTM builder, campaign tracker, lead scoring & analytics dashboard. Zero manual work.</p>
+          <div class="solution-card__tags"><span>GTM</span><span>UTM Builder</span><span>n8n</span></div>
+        </div>
+      </div>
+      <div class="solutions__controls">
+        <button class="solutions__btn solutions__btn--prev" id="solPrev"><i class="fas fa-arrow-left"></i></button>
+        <button class="solutions__btn solutions__btn--next" id="solNext"><i class="fas fa-arrow-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Speed of Delivery + Why Us -->
+  <section class="speed" id="about">
+    <div class="container">
+      <div class="speed__grid">
+        <div class="speed__content reveal">
+          <p class="section-tag">Why Triora</p>
+          <h2 class="section-title">We Ship in <span class="gradient-text">Days, Not Months</span></h2>
+          <p class="speed__text">
+            Triora Technologies is an AI-first development company based in Bangalore.
+            We leverage the latest AI tools and automation frameworks to architect and ship
+            production-ready solutions — faster, leaner, and smarter than traditional development.
+          </p>
+          <div class="speed__metrics">
+            <div class="speed__metric">
+              <div class="speed__metric-bar" style="--width: 95%"></div>
+              <div class="speed__metric-info">
+                <span>Speed of Delivery</span>
+                <strong>3x Faster</strong>
+              </div>
+            </div>
+            <div class="speed__metric">
+              <div class="speed__metric-bar" style="--width: 90%"></div>
+              <div class="speed__metric-info">
+                <span>Cost Efficiency</span>
+                <strong>60% Lower</strong>
+              </div>
+            </div>
+            <div class="speed__metric">
+              <div class="speed__metric-bar" style="--width: 98%"></div>
+              <div class="speed__metric-info">
+                <span>AI Automation Rate</span>
+                <strong>98%</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="speed__features reveal">
+          <div class="speed__feature">
+            <div class="speed__feature-icon"><i class="fas fa-bolt"></i></div>
+            <div>
+              <h4>48hr Turnaround</h4>
+              <p>Most automations live within 2 business days</p>
+            </div>
+          </div>
+          <div class="speed__feature">
+            <div class="speed__feature-icon"><i class="fas fa-brain"></i></div>
+            <div>
+              <h4>AI-Native Team</h4>
+              <p>Every engineer is an AI engineer — we think AI-first</p>
+            </div>
+          </div>
+          <div class="speed__feature">
+            <div class="speed__feature-icon"><i class="fas fa-diagram-project"></i></div>
+            <div>
+              <h4>n8n & No-Code Stack</h4>
+              <p>Visual automation workflows for rapid prototyping</p>
+            </div>
+          </div>
+          <div class="speed__feature">
+            <div class="speed__feature-icon"><i class="fas fa-rocket"></i></div>
+            <div>
+              <h4>Production-Ready</h4>
+              <p>Not MVPs — fully deployed, monitored, production systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team & Tech Stack -->
+  <section class="team" id="team">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Our Core Team</p>
+        <h2 class="section-title">AI Engineers as <span class="gradient-text">Our Stack</span></h2>
+        <p class="section-subtitle">Every team member is an AI engineer first — we don't just use AI, we think in AI</p>
+      </div>
+      <div class="team__grid">
+        <div class="team__role spotlight reveal">
+          <div class="team__role-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI Engineers</h3>
+          <p>Prompt engineering, LLM fine-tuning, RAG pipelines, AI agents</p>
+          <div class="team__role-tools">ChatGPT &middot; Claude &middot; LangChain</div>
+        </div>
+        <div class="team__role spotlight reveal">
+          <div class="team__role-icon"><i class="fas fa-diagram-project"></i></div>
+          <h3>Automation Architects</h3>
+          <p>Workflow design, n8n pipelines, system integration, data orchestration</p>
+          <div class="team__role-tools">n8n &middot; Make &middot; Zapier</div>
+        </div>
+        <div class="team__role spotlight reveal">
+          <div class="team__role-icon"><i class="fas fa-code"></i></div>
+          <h3>Full-Stack Developers</h3>
+          <p>Web & mobile apps, APIs, databases, cloud infrastructure</p>
+          <div class="team__role-tools">React &middot; Node.js &middot; Python &middot; AWS</div>
+        </div>
+        <div class="team__role spotlight reveal">
+          <div class="team__role-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+          <h3>AI Product Builders</h3>
+          <p>Rapid prototyping with AI-native tools, from idea to deployed product</p>
+          <div class="team__role-tools">Lovable &middot; Cursor &middot; v0 &middot; Bolt</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">What We Do</p>
+        <h2 class="section-title">Services That <span class="gradient-text">Drive Growth</span></h2>
+        <p class="section-subtitle">End-to-end AI-powered technology solutions</p>
+      </div>
+      <div class="services__grid">
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-robot"></i></div>
+            <h3 class="service-card__title">AI Automation</h3>
+            <p class="service-card__text">End-to-end workflow automation with n8n, ChatGPT & custom AI agents.</p>
+            <div class="service-card__tags"><span>n8n</span><span>ChatGPT</span><span>AI Agents</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-globe"></i></div>
+            <h3 class="service-card__title">Web Development</h3>
+            <p class="service-card__text">High-performance web apps built with AI-accelerated development.</p>
+            <div class="service-card__tags"><span>React</span><span>Next.js</span><span>Node.js</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-mobile-screen-button"></i></div>
+            <h3 class="service-card__title">App Development</h3>
+            <p class="service-card__text">Cross-platform mobile apps with seamless iOS & Android experiences.</p>
+            <div class="service-card__tags"><span>Flutter</span><span>React Native</span><span>Swift</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-brain"></i></div>
+            <h3 class="service-card__title">AI & ML Solutions</h3>
+            <p class="service-card__text">Custom AI models, LLM integrations & intelligent data pipelines.</p>
+            <div class="service-card__tags"><span>LLMs</span><span>RAG</span><span>Fine-tuning</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-cloud"></i></div>
+            <h3 class="service-card__title">Cloud & DevOps</h3>
+            <p class="service-card__text">Cloud architecture, CI/CD pipelines & infrastructure as code.</p>
+            <div class="service-card__tags"><span>AWS</span><span>Docker</span><span>Terraform</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-spider"></i></div>
+            <h3 class="service-card__title">Data Scraping</h3>
+            <p class="service-card__text">Scalable web scraping, data pipelines & structured data extraction.</p>
+            <div class="service-card__tags"><span>Python</span><span>Scrapy</span><span>APIs</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-bullseye"></i></div>
+            <h3 class="service-card__title">Marketing Automation</h3>
+            <p class="service-card__text">GTM automation, UTM builders, lead scoring & campaign analytics.</p>
+            <div class="service-card__tags"><span>GTM</span><span>n8n</span><span>Analytics</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="service-card reveal" data-tilt>
+          <div class="service-card__glow"></div>
+          <div class="service-card__content">
+            <div class="service-card__icon"><i class="fas fa-compass"></i></div>
+            <h3 class="service-card__title">IT Consulting</h3>
+            <p class="service-card__text">AI strategy, tech stack advisory & digital transformation roadmaps.</p>
+            <div class="service-card__tags"><span>Strategy</span><span>AI Audit</span><span>Roadmaps</span></div>
+            <a href="#contact" class="service-card__link">Learn More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Banner -->
+  <section class="stats-banner">
+    <div class="stats-banner__noise"></div>
+    <div class="container">
+      <div class="stats-banner__grid">
+        <div class="stats-banner__item reveal">
+          <span class="stats-banner__number" data-target="10">0</span><span class="stats-banner__suffix">+</span>
+          <span class="stats-banner__label">Automations Shipped</span>
+        </div>
+        <div class="stats-banner__item reveal">
+          <span class="stats-banner__number" data-target="48">0</span><span class="stats-banner__suffix">hr</span>
+          <span class="stats-banner__label">Avg. Delivery Time</span>
+        </div>
+        <div class="stats-banner__item reveal">
+          <span class="stats-banner__number" data-target="3">0</span><span class="stats-banner__suffix">x</span>
+          <span class="stats-banner__label">Faster Than Traditional</span>
+        </div>
+        <div class="stats-banner__item reveal">
+          <span class="stats-banner__number" data-target="98">0</span><span class="stats-banner__suffix">%</span>
+          <span class="stats-banner__label">Client Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries -->
+  <section class="industries" id="industries">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Industries</p>
+        <h2 class="section-title">Expertise Across <span class="gradient-text">Verticals</span></h2>
+        <p class="section-subtitle">Domain-specific AI solutions for the industries that shape the future</p>
+      </div>
+      <div class="industries__grid">
+        <div class="industry-card reveal">
+          <div class="industry-card__icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>Healthcare</h3>
+          <p>HIPAA-compliant platforms, telemedicine & health analytics</p>
+        </div>
+        <div class="industry-card reveal">
+          <div class="industry-card__icon"><i class="fas fa-coins"></i></div>
+          <h3>FinTech</h3>
+          <p>Secure payment systems, digital banking & compliance</p>
+        </div>
+        <div class="industry-card reveal">
+          <div class="industry-card__icon"><i class="fas fa-shopping-cart"></i></div>
+          <h3>E-Commerce</h3>
+          <p>Scalable storefronts, inventory & conversion optimization</p>
+        </div>
+        <div class="industry-card reveal">
+          <div class="industry-card__icon"><i class="fas fa-graduation-cap"></i></div>
+          <h3>EdTech</h3>
+          <p>LMS platforms, adaptive learning & engagement tools</p>
+        </div>
+        <div class="industry-card reveal">
+          <div class="industry-card__icon"><i class="fas fa-truck"></i></div>
+          <h3>Logistics</h3>
+          <p>Route optimization, fleet management & supply chain</p>
+        </div>
+        <div class="industry-card reveal">
+          <div class="industry-card__icon"><i class="fas fa-building"></i></div>
+          <h3>Real Estate</h3>
+          <p>Property platforms, virtual tours & smart buildings</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Our Work</p>
+        <h2 class="section-title">Automations & Products <span class="gradient-text">We've Built</span></h2>
+        <p class="section-subtitle">Real AI solutions deployed for real businesses</p>
+      </div>
+      <div class="work__grid">
+        <div class="work-card spotlight reveal">
+          <div class="work-card__number">01</div>
+          <div class="work-card__badge">Automation</div>
+          <h3 class="work-card__title">Visa Process Automation</h3>
+          <p class="work-card__text">Automated the entire visa application pipeline — document parsing, form filling, status tracking & notifications via n8n.</p>
+          <div class="work-card__results">
+            <div class="work-card__result">
+              <span class="work-card__result-number">90%</span>
+              <span class="work-card__result-label">Time Saved</span>
+            </div>
+            <div class="work-card__result">
+              <span class="work-card__result-number">n8n</span>
+              <span class="work-card__result-label">Powered By</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card spotlight reveal">
+          <div class="work-card__number">02</div>
+          <div class="work-card__badge">AI Agent</div>
+          <h3 class="work-card__title">AI Customer Support Agent</h3>
+          <p class="work-card__text">Built an intelligent support chatbot with context memory, ticket routing & autonomous resolution using ChatGPT + RAG.</p>
+          <div class="work-card__results">
+            <div class="work-card__result">
+              <span class="work-card__result-number">80%</span>
+              <span class="work-card__result-label">Auto-Resolved</span>
+            </div>
+            <div class="work-card__result">
+              <span class="work-card__result-number">24/7</span>
+              <span class="work-card__result-label">Availability</span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card spotlight reveal">
+          <div class="work-card__number">03</div>
+          <div class="work-card__badge">Marketing</div>
+          <h3 class="work-card__title">E2E Marketing Automation</h3>
+          <p class="work-card__text">Complete GTM pipeline — UTM builder, campaign tracker, lead scoring, analytics dashboard. Zero manual work.</p>
+          <div class="work-card__results">
+            <div class="work-card__result">
+              <span class="work-card__result-number">100%</span>
+              <span class="work-card__result-label">Automated</span>
+            </div>
+            <div class="work-card__result">
+              <span class="work-card__result-number">GTM</span>
+              <span class="work-card__result-label">Ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (hidden for now - uncomment to restore)
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-tag">Testimonials</p>
+        <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
+      </div>
+      <div class="testimonials__grid">
+        <div class="testimonial-card spotlight reveal">
+          <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-card__text">"Triora Technologies transformed our legacy systems into a modern, scalable platform. Their team's expertise in cloud architecture was exactly what we needed."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">RK</div>
+            <div>
+              <h4>Rajesh Kumar</h4>
+              <p>CTO, HealthFirst India</p>
+            </div>
+            <div class="testimonial-card__stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card spotlight reveal">
+          <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-card__text">"Working with Triora felt like having an in-house team. They understood our business from day one and delivered a product that exceeded our expectations."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">SP</div>
+            <div>
+              <h4>Sarah Patel</h4>
+              <p>Founder, PayWise</p>
+            </div>
+            <div class="testimonial-card__stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card spotlight reveal">
+          <div class="testimonial-card__quote"><i class="fas fa-quote-left"></i></div>
+          <p class="testimonial-card__text">"The AI solution Triora built for our logistics operations reduced operational costs by 35%. Their team is technically brilliant and incredibly responsive."</p>
+          <div class="testimonial-card__author">
+            <div class="testimonial-card__avatar">AM</div>
+            <div>
+              <h4>Arun Mehta</h4>
+              <p>VP Engineering, SwiftRoute</p>
+            </div>
+            <div class="testimonial-card__stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta__mesh">
+      <div class="cta__mesh-orb cta__mesh-orb--1"></div>
+      <div class="cta__mesh-orb cta__mesh-orb--2"></div>
+    </div>
+    <div class="container">
+      <div class="cta__inner reveal">
+        <p class="section-tag" style="color: rgba(255,255,255,0.6);">Let's Talk</p>
+        <h2 class="cta__title">Ready to Build Something <span class="gradient-text">Extraordinary?</span></h2>
+        <p class="cta__text">Let's discuss how Triora Technologies can accelerate your digital journey.</p>
+        <div class="cta__actions">
+          <a href="#contact" class="btn btn--glow">Get a Free Consultation <i class="fas fa-arrow-right"></i></a>
+          <a href="tel:+919019533772" class="btn btn--glass-dark"><i class="fas fa-phone"></i> Call Us Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="contact__info reveal">
+          <p class="section-tag">Get In Touch</p>
+          <h2 class="section-title">Let's Start a <span class="gradient-text">Conversation</span></h2>
+          <p class="contact__text">Have a project in mind? We'd love to hear about it. Reach out and let's explore how we can work together.</p>
+          <div class="contact__details">
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <a href="tel:+919019533772">+91 90195 33772</a>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <a href="mailto:akshithy888@gmail.com">akshithy888@gmail.com</a>
+              </div>
+            </div>
+            <div class="contact__detail">
+              <div class="contact__detail-icon"><i class="fas fa-location-dot"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>HAL, Bangalore, India</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact__socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="contact__form-wrapper reveal">
+          <form class="contact__form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX">
+              </div>
+              <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a service</option>
+                  <option value="web">Web Development</option>
+                  <option value="app">App Development</option>
+                  <option value="cloud">Cloud Architecture</option>
+                  <option value="ai">AI & ML Solutions</option>
+                  <option value="security">Cybersecurity</option>
+                  <option value="devops">DevOps & SRE</option>
+                  <option value="managed">Managed IT Services</option>
+                  <option value="consulting">IT Consulting</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Project Details</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn--glow btn--full">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="logo">
+            <img src="triora_icon.png" alt="" class="logo__svg">
+            <span class="logo__text"><span class="logo__brand">Triora</span><span class="logo__accent">Technologies</span></span>
+          </a>
+          <p>Engineering tomorrow's digital landscape with intelligent, scalable, and secure technology solutions.</p>
+          <div class="footer__socials">
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+        <div class="footer__links">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Web Development</a></li>
+            <li><a href="#services">App Development</a></li>
+            <li><a href="#services">Cloud Architecture</a></li>
+            <li><a href="#services">AI & ML Solutions</a></li>
+            <li><a href="#services">Cybersecurity</a></li>
+            <li><a href="#services">DevOps & SRE</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#work">Our Work</a></li>
+            <li><a href="#industries">Industries</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+919019533772"><i class="fas fa-phone"></i> +91 90195 33772</a></li>
+            <li><a href="mailto:akshithy888@gmail.com"><i class="fas fa-envelope"></i> akshithy888@gmail.com</a></li>
+            <li><span><i class="fas fa-location-dot"></i> HAL, Bangalore, India</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Triora Technologies. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms & Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Contact Button -->
+  <a href="https://wa.me/919019533772?text=Hi%20Triora%20Technologies!%20I%27m%20interested%20in%20your%20AI%20automation%20services.%20Can%20we%20discuss%20my%20project%3F" target="_blank" class="floating-btn" aria-label="WhatsApp us">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <i class="fas fa-rocket"></i>
+    <span class="toast__text"></span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
